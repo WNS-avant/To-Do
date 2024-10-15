@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todo.css">
+    <title>To-Do List</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=New+Amsterdam&family=Playwrite+NO:wght@100..400&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Stardos+Stencil:wght@400;700&display=swap');    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-family: 'New Amsterdam', sans-serif; text-align: center;">
+            My 
+            <span style="font-family: 'Bungee Tint', sans-serif; font-size: 100px;">To-Do</span> List
+        </h1>
+        <div class="counter-container">
+            <h5 class="counter" id="sch">SCHEDULED <span id="num2" style="font-family: 'Kalnia Glaze'; font-size: 25px;"></span></h5>
+            <h5 class="counter" id="cmp">COMPLETED <span id="num1" style="font-family: 'Kalnia Glaze'; font-size: 25px;"></span></h5>
+        </div>        
+        <button id="addTaskButton">
+            <svg viewBox="0 0 1024 1024" class="icon" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                <path d="M526.507431 109.121602c-231.868047 0-419.788888 187.920841-419.788887 419.788888s187.920841 419.788888 419.788887 419.788888 419.788888-187.920841 419.788888-419.788888S758.375478 109.121602 526.507431 109.121602zM778.381173 545.702209H543.29915v233.967012h-33.583438V545.702209H275.7487v-33.583438h233.967012V277.036748h33.583438v235.082023H778.381173v33.583438z" fill="#98C4D8"></path>
+                <path d="M492.923993 75.538164c-231.868047 0-419.788888 187.920841-419.788888 419.788887s187.920841 419.788888 419.788888 419.788888 419.788888-187.920841 419.788887-419.788888S724.792039 75.538164 492.923993 75.538164zM744.797735 512.118771H509.715712v233.967011h-33.583439V512.118771H242.166285v-33.583439h233.967012V243.453309h33.583439v235.082023H744.797735v33.583439z" fill="#EFD9A0"></path>
+                <path d="M268.480057 288.159806a30.213832 64.203753 55.515 1 0 105.843026-72.703105 30.213832 64.203753 55.515 1 0-105.843026 72.703105Z" fill="#FEFEFE"></path>
+                <path d="M203.600369 393.818901a20.142896 35.2493 55.515 1 0 58.110194-39.915635 20.142896 35.2493 55.515 1 0-58.110194 39.915635Z" fill="#FEFEFE"></path>
+            </svg>
+        </button>
+        <div id="taskInputContainer" style="display: none;">
+            <input type="text" id="taskInput" placeholder="Add a new task..." style="font-family: 'Space Mono', monospace;">
+            <button id="upButton">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.1" d="M3 12C3 4.5885 4.5885 3 12 3C19.4115 3 21 4.5885 21 12C21 19.4115 19.4115 21 12 21C4.5885 21 3 19.4115 3 12Z" fill="#323232"></path>
+                    <path d="M3 12C3 4.5885 4.5885 3 12 3C19.4115 3 21 4.5885 21 12C21 19.4115 19.4115 21 12 21C4.5885 21 3 19.4115 3 12Z" stroke="#323232" stroke-width="2"></path>
+                    <path d="M15 13L12.2014 10.2014V10.2014C12.0901 10.0901 11.9099 10.0901 11.7986 10.2014V10.2014L9 13" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+        <ul id="taskList" style="font-family: 'Playwrite NO', cursive;"></ul>
+        <img src="wns-logo.png" alt="logo" id="logo">
+    </div>
+    <script src="todo.js"></script>
+</body>
+</html>
